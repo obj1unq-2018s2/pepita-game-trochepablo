@@ -2,6 +2,7 @@ import pepita.*
 import ciudades.*
 import comidas.*
 import wollok.game.*
+import roque.*
 
 program PepitaGame {
 	
@@ -16,7 +17,12 @@ program PepitaGame {
 	game.addVisualIn(manzana, game.at(5,1))
 	game.addVisual(buenosAires)
 	game.addVisual(villaGesell)
-	game.addVisualCharacter(pepita)
+	game.addVisualIn(pepita, game.at(6,6))
+	game.addVisualCharacter(roque)
+
+//EVENTOS
+	
+	game.whenCollideDo(roque,{ objeto => objeto.colisionHacer(objeto)})
 
 //	TECLADO
 	keyboard.v().onPressDo { pepita.volaHacia(villaGesell) }

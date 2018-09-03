@@ -1,4 +1,6 @@
 import ciudades.*
+import wollok.game.*
+import roque.*
 
 object pepita {
 	var property energia = 100
@@ -24,4 +26,11 @@ object pepita {
 		energia -= self.energiaParaVolar(posicion.distance(nuevaPosicion))
 		self.posicion(nuevaPosicion)
 	}	
+	
+	method colisionHacer(objetoColision){
+		self.come(objetoColision)
+		game.addVisualIn(roque.alimento(), game.at(7,7))
+		
+		//roque.alimento(null)
+	}
 }
