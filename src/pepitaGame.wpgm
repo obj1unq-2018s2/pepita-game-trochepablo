@@ -17,12 +17,12 @@ program PepitaGame {
 	game.addVisualIn(manzana, game.at(5,1))
 	game.addVisual(buenosAires)
 	game.addVisual(villaGesell)
-	game.addVisualIn(pepita, game.at(6,6))
-	game.addVisualCharacter(roque)
+	game.addVisualCharacter(pepita)
+//	game.addVisualCharacter(roque)
 
 //EVENTOS
-	
-	game.whenCollideDo(roque,{ objeto => objeto.colisionHacer(objeto)})
+	//game.onTick(100, { pepita.swicthImage() })
+	//game.whenCollideDo(roque,{ objeto => objeto.colisionHacer(objeto)})
 
 //	TECLADO
 	keyboard.v().onPressDo { pepita.volaHacia(villaGesell) }
