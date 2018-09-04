@@ -5,8 +5,8 @@ import roque.*
 object pepita {
 	var property energia = 110
 	var property ciudad = buenosAires 
-
 	var property posicion = game.at(3,3)
+	
 	method imagen(){ 
 		var imagen = "pepita1.png";
 		if (self.energia() > 100) {
